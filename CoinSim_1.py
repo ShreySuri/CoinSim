@@ -14,3 +14,10 @@ head_count = 0
 for  i in range (0, flips):
 	head_count = head_count + 1
 	opposite = flips - head_count
+
+	if head_count == 0 or opposite == 0:
+		if head_count == 0:
+			num = 1
+			denom = 2 ** flips
+			print("1 head - %s/%s" % (num, denom))
+		elif 
