@@ -20,4 +20,7 @@ for  i in range (0, flips):
 			num = 1
 			denom = 2 ** flips
 			print("1 head - %s/%s" % (num, denom))
-		elif 
+		elif opposite == 0:
+			num = 1
+			denom = 2 ** flips
+			print("%s heads - %s/%s" % (flips, num, denom))
