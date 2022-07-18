@@ -1,6 +1,3 @@
-import math
-
-
 def bin_list(x):
     list_1 = [0]
     list_length = 1
@@ -20,15 +17,22 @@ def bin_list(x):
             toggle = True
 
         list_1[0] = list_1[0] + 1
-        for i in range (0, val_count):
-            if list_1[i] == 2:
-                list_1[i] = 0
-                x = i + 1
+        for k in range (0, val_count):
+            if list_1[k] == 2:
+                list_1[k] = 0
+                x = k + 1
                 list_1[x] == list_1[x] + 1
 
         return(list_1)
 
+flips = 0
+while flips % 1 != 0 and flips < 1:
+    print("")
+    flips = input(print("How many times will the coin be flipped? Please enter an integer. "))
+    flips = float(flips)
+flips = int(flips)
 
-        
-            
+total_events = 2 ** flips
 
+print(bin_list(flips))
+print(bin_list(total_events))
