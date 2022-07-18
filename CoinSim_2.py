@@ -21,7 +21,7 @@ def bin_list(x):
             if list_1[i] == 2:
                 list_1[i] = 0
                 x = i + 1
-                list_1[x] == list_1[x] + 1
+                list_1[x] = list_1[x] + 1
 
         return(list_1)
 
@@ -33,5 +33,5 @@ flips = int(flips)
 
 total_events = 2 ** flips
 
-print(binary(flips))
-print(binary(total_events))
+print(bin_list(flips))
+print(bin_list(total_events))
