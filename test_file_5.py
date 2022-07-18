@@ -1,6 +1,7 @@
+def stringToList(string):
+    listRes = list(string.split(""))
+    return listRes
 
-def binary(integer):
-    bit_string = bin(integer)
-    final = bit_string.lstrip('-0b')
-    return(final)
 
+strA = "Millie Bobby Brown"
+print(stringToList(strA))
