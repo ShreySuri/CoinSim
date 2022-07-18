@@ -1,6 +1,18 @@
 
 flips = 0
 
+def mid(x)
+	if x % 2 == 0:
+		y = int(x / 2)
+	elif x % 2 == 1:
+		y = int((x + 1) / 2)
+	else:
+		y = False
+
+	return(y)
+
+
+
 while flips % 1 != 0 and flips < 1:
 	print("")
 	flips = input(print("How many times will the coun be flipped. Please enter an integer. "))
@@ -9,18 +21,3 @@ flips = int(flips)
 
 total_events = 2 ** flips
 
-head_count = 0
-
-for  i in range (0, flips):
-	head_count = head_count + 1
-	opposite = flips - head_count
-
-	if head_count == 0 or opposite == 0:
-		if head_count == 0:
-			num = 1
-			denom = 2 ** flips
-			print("1 head - %s/%s" % (num, denom))
-		elif opposite == 0:
-			num = 1
-			denom = 2 ** flips
-			print("%s heads - %s/%s" % (flips, num, denom))
