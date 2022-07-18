@@ -1,25 +1,31 @@
-def bin_list(x):
-    list_1 = [0]
+def bin_list(x, y):
+    list_1 = []
     power = 1
-    while 2 ** power <= x:
-        power = power + 1
+    val_count = 0
+    for i in range (0, y):
         list_1.append(0)
+        power = power * 2
+        val_count = val_count + 1
 
-    val_count = power
-    for i in range (0, x):
-        list_1[0] = list_1[0] + 1
+    if x < power:
+        for i in range (0, x):
+            list_1[0] = list_1[0] + 1
 
-        for j in range (0, val_count):
-            if list_1[j] == 2:
-                list_1[j] = 0
-                k = j + 1
-                list_1[k] = list_1[k] + 1
-            else:
-                toggle = True
+            for j in range (0, val_count):
+                if list_1[j] == 2:
+                    list_1[j] = 0
+                    k = j + 1
+                    list_1[k] = list_1[k] + 1
+                else:
+                    toggle = True
 
-    list_1.reverse()
-    return(list_1)
+        list_1.reverse()
+        return(list_1)
+    
+    else:
+        return(False)
 
+        
 
 flips = 0
 while flips % 1 != 0 or flips < 1:
@@ -30,5 +36,4 @@ flips = int(flips)
 
 total_events = 2 ** flips
 
-print(bin_list(flips))
-print(bin_list(total_events))
+print(bin_list(10, flips))
