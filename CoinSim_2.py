@@ -19,3 +19,5 @@ def bin_list(x):
     list_1 = [0]
     list_length = 1
     for i in range (0, x):
+
+        ldli;.ksacnk;c
