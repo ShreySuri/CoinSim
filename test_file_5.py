@@ -20,7 +20,14 @@ def bin_list(x):
             toggle = True
 
         list_1[0] = list_1[0] + 1
-        for i in range (0, 
+        for i in range (0, val_count):
+            if list_1[i] == 2:
+                list_1[i] = 0
+                x = i + 1
+                list_1[x] == list_1[x] + 1
+
+        return(list_1)
+
 
         
             
