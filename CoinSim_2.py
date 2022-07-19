@@ -45,3 +45,10 @@ for i in range (0, flips_plus_1):
     target = i
     counter = 0
     
+    for j in range (0, total_events):
+        list_1 = bin_list(j, flips)
+        total = 0
+        
+        for k in range (0, flips):
+            total = total + list_1[k]
+            
