@@ -38,6 +38,16 @@ total_events = 2 ** flips
 for i in range (0, total_events):
     bin_list_1 = bin_list(i, flips)
     total = 0
+    
     for j in range (0, flips):
-        total = total + bin_list_1[i] 
+        total = total + bin_list_1[i]
+
+    if total == target:
+        counter = counter + 1
+    else:
+        counter = counter + 0
+
+    fraction = counter/total_events
+    print("%s -- %s/%s -- %s" % (target, counter, total_events, fraction))
+
 
