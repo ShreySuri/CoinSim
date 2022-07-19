@@ -36,4 +36,8 @@ flips = int(flips)
 total_events = 2 ** flips
 
 for i in range (0, total_events):
-    bin_list_1 = bin_list(i)
+    bin_list_1 = bin_list(i, flips)
+    total = 0
+    for j in range (0, flips):
+        total = total + bin_list_1[i] 
+
