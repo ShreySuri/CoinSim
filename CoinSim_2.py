@@ -34,20 +34,27 @@ while flips % 1 != 0 or flips < 1:
 flips = int(flips)
 
 total_events = 2 ** flips
+print("Number of Heads:")
+print("")
 
-for i in range (0, total_events):
-    bin_list_1 = bin_list(i, flips)
-    total = 0
+
+for h in range (0, flips):
+    target = h
+
+    for i in range (0, total_events):
+        bin_list_1 = bin_list(i, flips)
+        total = 0
     
-    for j in range (0, flips):
-        total = total + bin_list_1[i]
+        for j in range (0, flips):
+            total = total + bin_list_1[i]
 
-    if total == target:
-        counter = counter + 1
-    else:
-        counter = counter + 0
+        if total == target:
+            counter = counter + 1
+        else:
+            counter = counter + 0
 
-    fraction = counter/total_events
-    print("%s -- %s/%s -- %s" % (target, counter, total_events, fraction))
+        fraction = counter/total_events
+        print("%s -- %s/%s -- %s" % (target, counter, total_events, fraction))
 
-
+fraction = 1/total_events
+print("%s -- 1/%s -- %s" % (flips, total_events, fraction))
