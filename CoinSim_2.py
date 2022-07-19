@@ -51,4 +51,13 @@ for i in range (0, flips_plus_1):
         
         for k in range (0, flips):
             total = total + list_1[k]
+        
+        if total == target:
+            counter = counter + 1
+        else:
+            counter = counter + 0
+
+    decimal = counter/total_events
+    print("%s -- %s/%s -- %s" % (target, counter, total_events, decimal))
+    
             
