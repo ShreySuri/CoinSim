@@ -25,7 +25,6 @@ def bin_list(x, y):
     else:
         return(False)
 
-        
 
 flips = 0
 while flips % 1 != 0 or flips < 1:
@@ -36,4 +35,30 @@ flips = int(flips)
 
 total_events = 2 ** flips
 
-print(bin_list(10, flips))
+
+flips_plus_1 = flips + 1
+
+print("")
+print("Number of Heads -- Fractional Probability -- Decimal")
+print("")
+
+for i in range (0, flips_plus_1):
+    target = i
+    counter = 0
+    
+    for j in range (0, total_events):
+        list_1 = bin_list(j, flips)
+        total = 0
+        
+        for k in range (0, flips):
+            total = total + list_1[k]
+            
+        if total == target:
+            counter = counter + 1
+        else:
+            counter = counter + 0
+
+    decimal = counter/total_events
+    print("%s -- %s/%s -- %s" % (target, counter, total_events, decimal))
+    
+
