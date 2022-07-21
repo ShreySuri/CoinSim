@@ -20,4 +20,8 @@ while flips % 1 != 0 and flips < 1:
 flips = int(flips)
 
 total_events = 2 ** flips
+cutoff = mid(flips)
+head_count = 0
 
+while head_count < cutoff:
+	
