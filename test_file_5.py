@@ -1,3 +1,3 @@
-x = input(print(""))
+x = input("")
 x = list(x)
 print(x)
